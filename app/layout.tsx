@@ -1,16 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { Separator } from "@radix-ui/react-separator";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,12 +14,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="">
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarInset>
+            <header className="flex h-16 shrink-0 items-center bg-gray-100 gap-2 border-b">
+              <div className="flex items-center gap-2 px-3 ">
+                <SidebarTrigger />
+                <Separator orientation="vertical" className="mr-2 h-4" />
+              </div>
+            </header>
+            <div className="flex flex-1 flex-col gap-4 p-4">
+             {children}
+            </div>
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );
