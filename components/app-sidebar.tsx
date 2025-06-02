@@ -39,6 +39,30 @@ const data = {
           title: "Disabled lists",
           url: "/disabling",
         },
+        {
+          title: "Handle",
+          url: "/handle",
+        },
+        {
+          title: "Threshold *",
+          url: "/threshold",
+        },
+        {
+          title: "Grid",
+          url: "/grid",
+        },
+        {
+          title: "Nested Sorting *",
+          url: "/nested-sorting",
+        },
+        {
+          title: "MultiDrag",
+          url: "/multi-drag",
+        },
+        {
+          title: "Swap",
+          url: "/swap",
+        },
       ],
     },
   ],
