@@ -1,9 +1,10 @@
 import React from 'react'
+import SimpleList from './simple-list/page'
 
 const page = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <SimpleList/>
     </div>
   )
 }

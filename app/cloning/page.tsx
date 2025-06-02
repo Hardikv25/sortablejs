@@ -38,8 +38,8 @@ export default function Page() {
                             tag="ul"
                             className="space-y-3"
                         >
-                            {Items1.map((item) => (
-                                <li key={item.id}>
+                            {Items1.map((item, Index) => (
+                                <li key={Index}>
                                     <div
                                         className={`
     py-3 px-5 rounded-lg transition-all duration-150 shadow-sm cursor-move
@@ -56,8 +56,8 @@ export default function Page() {
                     <div className="bg-white p-6 rounded-xl shadow-lg border mt-6">
                         <h2 className="text-xl font-semibold text-gray-700 mb-4">📦 JSON Output</h2>
                         <div className="space-y-2 font-mono text-sm text-gray-600 bg-gray-50 p-4 rounded-lg max-h-[400px] overflow-auto">
-                            {Items1.map((item) => (
-                                <p key={item.id} >{`{"id" : ${item.id} , "name" : ${item.name}}`}</p>
+                            {Items1.map((item, Index) => (
+                                <p key={Index} >{`{"id" : ${item.id} , "name" : ${item.name}}`}</p>
                             ))}
                         </div>
                     </div>
@@ -78,8 +78,8 @@ export default function Page() {
                             tag="ul"
                             className="space-y-3"
                         >
-                            {Items2.map((item) => (
-                                <li key={item.id}>
+                            {Items2.map((item, Index) => (
+                                <li key={Index}>
                                     <div
                                         className={`
     py-3 px-5 rounded-lg transition-all duration-150 shadow-sm cursor-move
@@ -96,8 +96,8 @@ export default function Page() {
                     <div className="bg-white p-6 rounded-xl shadow-lg border mt-6">
                         <h2 className="text-xl font-semibold text-gray-700 mb-4">📦 JSON Output</h2>
                         <div className="space-y-2 font-mono text-sm text-gray-600 bg-gray-50 p-4 rounded-lg max-h-[400px] overflow-auto">
-                            {Items2.map((item) => (
-                                <p key={item.id} >{`{"id" : ${item.id} , "name" : ${item.name}}`}</p>
+                            {Items2.map((item, Index) => (
+                                <p key={Index} >{`{"id" : ${item.id} , "name" : ${item.name}}`}</p>
                             ))}
                         </div>
                     </div>
